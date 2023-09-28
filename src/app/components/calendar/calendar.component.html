@@ -1,0 +1,8 @@
+<div class="calendar">
+    <div *ngFor="let event of events" class="event">
+      <p class="date">{{ event.date | date }}</p>
+      <p class="time">{{ event.time }}</p>
+      <p class="title">{{ event.title }}</p>
+    </div>
+  </div>
+  

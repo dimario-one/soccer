@@ -3,12 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScheduleComponent } from './schedule/schedule.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { ParticipationAndInvitationsComponent } from './components/participation-and-invitations/participation-and-invitations.component';
+import { StatisticsAndPlayerRatingsComponent } from './components/statistics-and-player-ratings/statistics-and-player-ratings.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScheduleComponent
+    HeaderComponent,
+    CalendarComponent,
+    ParticipationAndInvitationsComponent,
+    StatisticsAndPlayerRatingsComponent,
   ],
   imports: [
     BrowserModule,

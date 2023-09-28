@@ -1,0 +1,14 @@
+<div class="participants-list">
+    <h2>Список участников:</h2>
+    <ul >
+      <li *ngFor="let participant of participants">{{ participant.name }}</li>
+    </ul>
+  </div>
+  
+  <div class="invitations-list">
+    <h2>Уведомления о приглашениях:</h2>
+    <ul>
+      <li *ngFor="let invitation of invitations">{{ invitation.sender }} пригласил вас на мероприятие "{{ invitation.event }}"</li>
+    </ul>
+  </div>
+  
