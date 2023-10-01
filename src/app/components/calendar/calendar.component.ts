@@ -17,6 +17,5 @@ export class CalendarComponent {
   events: Event[] = [
     { date: new Date(2023, 9, 5), time: '15:00', title: 'Тренировка' },
     { date: new Date(2023, 9, 10), time: '19:30', title: 'Игра с командой А' },
-    // Добавьте другие события
   ];
 }

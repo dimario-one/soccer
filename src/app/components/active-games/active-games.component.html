@@ -1,0 +1,10 @@
+<div class="active-games">
+    <h2>Активные турниры и игры</h2>
+    <ul>
+      <li *ngFor="let game of activeGames">
+        <span>{{ game.name }}</span>
+        <span>{{ game.date }}</span>
+      </li>
+    </ul>
+  </div>
+  
