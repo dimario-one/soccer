@@ -1,27 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-// Массив статистики
-gameStatistics = [
-    { gameName: 'Игра 1', bestScore: 100 },
-    { gameName: 'Игра 2', bestScore: 150 },
-  ];
-
-  // Массив рейтинга
-  playerRatings = [
-    { playerName: 'Игрок 1', rating: 9.5 },
-    { playerName: 'Игрок 2', rating: 8.8 },
+// Массив игр
+activeGames = [
+    { id: 1, name: 'Турнир 1', date: '2023-10-15' },
+    { id: 2, name: 'Игра 1', date: '2023-10-18' },
+    // Добавьте другие активные турниры и игры по аналогии
   ];
 
 // Маршрут для получения списка событий
-router.get('/statistics', (req, res) => {
-  res.json(gameStatistics); 
+router.get('/events', (req, res) => {
+  res.json(activeGames); 
 });
-
-// Маршрут для получения списка событий
-router.get('/ratings', (req, res) => {
-    res.json(playerRatings); 
-  });
 
 module.exports = router;
 

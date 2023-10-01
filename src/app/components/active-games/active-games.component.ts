@@ -1,6 +1,6 @@
-// active-games.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActiveGame } from '../../models/active-games.model';
+import { ActiveGamesService } from '../../services/active-games.service'; // Путь к сервису
 
 @Component({
   selector: 'app-active-games',
@@ -8,13 +8,22 @@ import { ActiveGame } from '../../models/active-games.model';
   styleUrls: ['./active-games.component.css']
 })
 export class ActiveGamesComponent implements OnInit {
-  activeGames: ActiveGame[] = [
-    { id: 1, name: 'Турнир 1', date: '2023-10-15' },
-    { id: 2, name: 'Игра 1', date: '2023-10-18' },
-    // Добавьте другие активные турниры и игры по аналогии
-  ];
+  activeGames: ActiveGame[] = [];
 
-  constructor() {}
+  constructor(private activeGamesService: ActiveGamesService) {} // Внедрение сервиса
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadActiveGames(); // Вызываем метод загрузки данных при инициализации компонента
+  }
+
+  private loadActiveGames() {
+    this.activeGamesService.getActiveGames().subscribe(
+      (data: ActiveGame[]) => {
+        this.activeGames = data;
+      },
+      (error) => {
+        console.error('Ошибка при получении данных:', error);
+      }
+    );
+  }
 }

@@ -8,6 +8,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { ParticipationAndInvitationsComponent } from './components/participation-and-invitations/participation-and-invitations.component';
 import { StatisticsAndPlayerRatingsComponent } from './components/statistics-and-player-ratings/statistics-and-player-ratings.component';
 import { ActiveGamesComponent } from './components/active-games/active-games.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ActiveGamesComponent } from './components/active-games/active-games.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
